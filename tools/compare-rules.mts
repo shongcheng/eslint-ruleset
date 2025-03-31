@@ -150,20 +150,21 @@ ${rulesCountString}
 
   console.log(
     markdownTable([
-      ['Rule', 'Status', 'TC', 'Ext', "Rec'd", 'Strict', 'Style'],
+      ['Rule', 'Status', 'TC', 'Ext', "Rec'd", 'Strict', 'Style', 'Desc'],
       ...Object.entries(rules).map(([ruleName, { meta }]) => {
         const { deprecated } = meta;
-        const { extendsBaseRule, recommended, requiresTypeChecking } =
+        const { extendsBaseRule, recommended, requiresTypeChecking, description } =
           meta.docs;
 
         return [
           `[\`${ruleName}\`](https://typescript-eslint.io/rules/${ruleName})`,
           newRuleNames.has(ruleName) ? '🆕' : deprecated ? '💀' : '',
-          requiresTypeChecking ? '💭' : '',
-          extendsBaseRule ? '🧱' : '',
-          recommended === 'recommended' ? '🟩' : '',
-          recommended === 'strict' ? '🔵' : '',
-          recommended === 'stylistic' ? '🔸' : '',
+          requiresTypeChecking ? '💭 tc' : '',
+          extendsBaseRule ? '🧱 ext' : '',
+          recommended === 'recommended' ? '🟩 rec' : '',
+          recommended === 'strict' ? '🔵 strict' : '',
+          recommended === 'stylistic' ? '🔸 style' : '',
+          description,
         ];
       }),
     ]),
