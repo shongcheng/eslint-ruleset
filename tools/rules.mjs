@@ -60,17 +60,20 @@ const loadAssessments = (path) => {
  * @param content
  * @return {*}
  */
-const encodeAsMarkdownCellContent = (content) => {
-  return content.replaceAll('\n\n', '<br/>`  `').replaceAll('\n', '')
+const encodeAsMarkdownCellContent = (content, linePrefix = '') => {
+  return content.replaceAll('\n\n', `<br/>${linePrefix}`).replaceAll('\n', '')
 }
 
 const formatAssessmentAsCellMarkdown = (content, deprecated) => {
   let result = '';
   if (deprecated) {
-    result += `<br/>**💀 Deprecated 💀**<br/>`;
+    result += `<br/>**💀 Deprecated 💀**`;
   }
-  if (content) {
-    result += `<br/>**Assessment:**<br/>\`  \`${encodeAsMarkdownCellContent(content)}`;
+  if (content?.details) {
+    result += `<br/><br/>*Details:* ${encodeAsMarkdownCellContent(content.details)}`;
+  }
+  if (content?.assessment) {
+    result += `<br/><br/>**Assessment:**<br/>\`  \`${encodeAsMarkdownCellContent(content.assessment, '`  `')}`;
   }
   return result;
 }
