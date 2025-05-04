@@ -16,6 +16,11 @@ do
     --exclude .auto-backups/ \
     --exclude .git/ \
     --exclude .gradle/ \
+    --exclude node_modules/ \
+    --exclude build/ \
+    --exclude dist/ \
+    --exclude .vscode/ \
+    --exclude .idea/ \
     --exclude-from .gitignore
   set +e
   (cd "${BACKUP_DIR}" && pwd && git add . && git commit -m "auto-commit_$(date +"%Y-%m-%d_%H:%M:%S")" \
