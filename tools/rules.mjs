@@ -54,13 +54,14 @@ export const generateTable = (rulesDb) => {
 
   console.log(
     markdownTable([
-      ['', ...configNames, '🧱', 'Desc'],
+      ['', ...configNames, 'ext', 'rec', 'strict', 'style', 'Desc'],
       ...Array.from(rules.keys()).sort(rulesCompareFn).map((ruleName) => {
         const meta = allRules[ruleName]?.meta;
         const deprecated = meta ? meta.deprecated : false;
         const extendsBaseRule = meta?.docs ? meta.docs.extendsBaseRule : false;
         const url = meta?.docs ? meta.docs.url : undefined;
-        const { description } = (meta)?meta.docs:'';
+        const description = meta?.docs.description;
+        const recommended = meta?.docs.recommended;
         return [
           url
             ? `[\`${ruleName}\`${deprecated ? '💀' : ''}${extendsBaseRule ? '🧱' : ''}](${url})`
@@ -74,6 +75,9 @@ export const generateTable = (rulesDb) => {
             }
           }),
           extendsBaseRule ? '🧱 ext' : '',
+          recommended === 'recommended' ? '🟩 rec' : '',
+          recommended === 'strict' ? '🔵 strict' : '',
+          recommended === 'stylistic' ? '🔸 style' : '',
           description,
         ];
       }),
