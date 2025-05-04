@@ -55,13 +55,17 @@ const loadAssessments = (path) => {
   return assessments;
 }
 
+const encodeAsMarkdownCellContent = (content) => {
+  return content.replaceAll('\n', '<br/>')
+}
+
 export const generateTable = (rulesDb) => {
   const configNames = Object.keys(rulesDb.getConfigs());
   const rules = rulesDb.rules;
   const assessments = loadAssessments('assessments.yaml');
   console.log(
     markdownTable([
-      ['', ...configNames, 'ext', 'rec', 'strict', 'style', 'Desc', ''],
+      ['', ...configNames, 'ext', 'rec', 'strict', 'style', 'Desc'],
       ...Array.from(rules.keys()).sort(rulesCompareFn).map((ruleName) => {
         const meta = allRules[ruleName]?.meta;
         const deprecated = meta ? meta.deprecated : false;
@@ -69,6 +73,8 @@ export const generateTable = (rulesDb) => {
         const url = meta?.docs ? meta.docs.url : undefined;
         const description = meta?.docs.description;
         const recommended = meta?.docs.recommended;
+        const assessment = assessments[ruleName]?.assessment;
+        const assessmentMD = (assessment) ? assessment : '';
         return [
           url
             ? `[\`${ruleName}\`${deprecated ? '💀' : ''}${extendsBaseRule ? '🧱' : ''}](${url})`
@@ -85,8 +91,7 @@ export const generateTable = (rulesDb) => {
           recommended === 'recommended' ? '🟩 rec' : '',
           recommended === 'strict' ? '🔵 strict' : '',
           recommended === 'stylistic' ? '🔸 style' : '',
-          description,
-          assessments[ruleName]?.assessment ?? ''
+          `${description}\n\n${assessmentMD}`,
         ];
       }),
     ]),
