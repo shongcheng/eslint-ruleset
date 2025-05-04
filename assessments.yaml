@@ -8,5 +8,6 @@ array-bracket-spacing:
     anthoer **br**
     softbreak
 
-another:
-  assessment: ac
+array-callback-return:
+  details: |
+    Array has several methods for filtering, mapping, and folding. If we forget to write return statement in a callback of those, it’s probably a mistake. If you don’t want to use a return or don’t need the returned results, consider using .forEach instead.  

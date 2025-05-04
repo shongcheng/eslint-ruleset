@@ -65,12 +65,14 @@ const encodeAsMarkdownCellContent = (content) => {
 }
 
 const formatAssessmentAsCellMarkdown = (content, deprecated) => {
+  let result = '';
   if (deprecated) {
-    return `<br/>**Deprecated 💀**<br/>`;
+    result += `<br/>**💀 Deprecated 💀**<br/>`;
   }
   if (content) {
-    return `<br/>**Assessment:**<br/>\`  \`${encodeAsMarkdownCellContent(content)}`
+    result += `<br/>**Assessment:**<br/>\`  \`${encodeAsMarkdownCellContent(content)}`;
   }
+  return result;
 }
 
 export const generateTable = (rulesDb) => {
@@ -87,7 +89,7 @@ export const generateTable = (rulesDb) => {
         const url = meta?.docs ? meta.docs.url : undefined;
         const description = meta?.docs.description;
         const recommended = meta?.docs.recommended;
-        const assessment = assessments[ruleName]?.assessment;
+        const assessment = assessments[ruleName];
         return [
           url
             ? `[\`${ruleName}\`${deprecated ? '💀' : ''}${extendsBaseRule ? '🧱' : ''}](${url})`
