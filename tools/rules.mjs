@@ -2,6 +2,8 @@ import { markdownTable } from 'markdown-table';
 
 import { builtinRules as eslintRules } from "eslint/use-at-your-own-risk";
 import tseslintRules from '@typescript-eslint/eslint-plugin/use-at-your-own-risk/rules';
+import * as YAML from 'yaml';
+import * as fs from 'node:fs';
 
 
 const allRules = Object.keys(tseslintRules).sort().reduce((obj, key) => {
@@ -48,13 +50,18 @@ export const getEnabledRules = (rules) => {
     return enabledRules;
 }
 
+const loadAssessments = (path) => {
+  const assessments = YAML.parse(fs.readFileSync(path).toString());
+  return assessments;
+}
+
 export const generateTable = (rulesDb) => {
   const configNames = Object.keys(rulesDb.getConfigs());
   const rules = rulesDb.rules;
-
+  const assessments = loadAssessments('assessments.yaml');
   console.log(
     markdownTable([
-      ['', ...configNames, 'ext', 'rec', 'strict', 'style', 'Desc'],
+      ['', ...configNames, 'ext', 'rec', 'strict', 'style', 'Desc', ''],
       ...Array.from(rules.keys()).sort(rulesCompareFn).map((ruleName) => {
         const meta = allRules[ruleName]?.meta;
         const deprecated = meta ? meta.deprecated : false;
@@ -79,6 +86,7 @@ export const generateTable = (rulesDb) => {
           recommended === 'strict' ? '🔵 strict' : '',
           recommended === 'stylistic' ? '🔸 style' : '',
           description,
+          assessments[ruleName]?.assessment ?? ''
         ];
       }),
     ]),
