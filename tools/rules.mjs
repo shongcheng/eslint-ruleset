@@ -64,9 +64,12 @@ const encodeAsMarkdownCellContent = (content) => {
   return content.replaceAll('\n\n', '<br/>`  `').replaceAll('\n', '')
 }
 
-const formatAssessmentAsCellMarkdown = (content) => {
+const formatAssessmentAsCellMarkdown = (content, deprecated) => {
+  if (deprecated) {
+    return `<br/>**Deprecated 💀**<br/>`;
+  }
   if (content) {
-    return `<br/>**Assessment:**<br/>${encodeAsMarkdownCellContent(content)}`
+    return `<br/>**Assessment:**<br/>\`  \`${encodeAsMarkdownCellContent(content)}`
   }
 }
 
@@ -101,7 +104,7 @@ export const generateTable = (rulesDb) => {
           recommended === 'recommended' ? '🟩 rec' : '',
           recommended === 'strict' ? '🔵 strict' : '',
           recommended === 'stylistic' ? '🔸 style' : '',
-          `${description ?? ''}${formatAssessmentAsCellMarkdown(assessment)}`,
+          `${description ?? ''}${formatAssessmentAsCellMarkdown(assessment, deprecated)}`,
         ];
       }),
     ]),
