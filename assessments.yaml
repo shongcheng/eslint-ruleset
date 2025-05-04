@@ -2,6 +2,11 @@ array-bracket-spacing:
   assessment: |
     line 1
     line 2
+    
+    hard br
+    
+    anthoer **br**
+    softbreak
 
 another:
   assessment: ac

@@ -55,8 +55,19 @@ const loadAssessments = (path) => {
   return assessments;
 }
 
+/**
+ * Dual newlines to indicate hard line break, single newlines are ignored
+ * @param content
+ * @return {*}
+ */
 const encodeAsMarkdownCellContent = (content) => {
-  return content.replaceAll('\n', '<br/>')
+  return content.replaceAll('\n\n', '<br/>`  `').replaceAll('\n', '')
+}
+
+const formatAssessmentAsCellMarkdown = (content) => {
+  if (content) {
+    return `<br/>**Assessment:**<br/>${encodeAsMarkdownCellContent(content)}`
+  }
 }
 
 export const generateTable = (rulesDb) => {
@@ -74,7 +85,6 @@ export const generateTable = (rulesDb) => {
         const description = meta?.docs.description;
         const recommended = meta?.docs.recommended;
         const assessment = assessments[ruleName]?.assessment;
-        const assessmentMD = (assessment) ? assessment : '';
         return [
           url
             ? `[\`${ruleName}\`${deprecated ? '💀' : ''}${extendsBaseRule ? '🧱' : ''}](${url})`
@@ -91,7 +101,7 @@ export const generateTable = (rulesDb) => {
           recommended === 'recommended' ? '🟩 rec' : '',
           recommended === 'strict' ? '🔵 strict' : '',
           recommended === 'stylistic' ? '🔸 style' : '',
-          `${description}\n\n${assessmentMD}`,
+          `${description ?? ''}${formatAssessmentAsCellMarkdown(assessment)}`,
         ];
       }),
     ]),
