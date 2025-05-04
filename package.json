@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "generate:compare-rules": "tsx ./tools/compare-rules.mts",
+    "generate:compare-rules": "tsx tools/compare-eslintrules-with-latest.mts",
     "generate:config-rules": "tsx ./tools/list-config-rules.mjs"
   },
   "keywords": [],
@@ -19,6 +19,7 @@
     "eslint-config-airbnb-base": "15.0.0",
     "eslint-config-airbnb-typescript": "18.0.0",
     "eslint-plugin-import": "2.31.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
     "install": "^0.13.0",
     "markdown-table": "^3.0.4",
     "npm": "^10.9.2",
