@@ -8,7 +8,7 @@ import tsRecommended from './ruleset/tsRecommended.mjs'
 
 const rulesDb = new RulesDb();
 
-rulesDb.addConfig(getEnabledRules(airbnb.rules), 'airbnb-typescript')
+rulesDb.addConfig(getEnabledRules(airbnb.rules), 'airbnb-ts')
 rulesDb.addConfig(getEnabledRules(tsRecommended.rules), 'ts-tc-rec')
 
 
