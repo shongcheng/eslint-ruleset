@@ -2,6 +2,8 @@ import { markdownTable } from 'markdown-table';
 
 import { builtinRules as eslintRules } from "eslint/use-at-your-own-risk";
 import tseslintRules from '@typescript-eslint/eslint-plugin/use-at-your-own-risk/rules';
+import * as YAML from 'yaml';
+import * as fs from 'node:fs';
 
 
 const allRules = Object.keys(tseslintRules).sort().reduce((obj, key) => {
@@ -48,18 +50,49 @@ export const getEnabledRules = (rules) => {
     return enabledRules;
 }
 
+const loadAssessments = (path) => {
+  const assessments = YAML.parse(fs.readFileSync(path).toString());
+  return assessments;
+}
+
+/**
+ * Dual newlines to indicate hard line break, single newlines are ignored
+ * @param content
+ * @return {*}
+ */
+const encodeAsMarkdownCellContent = (content, linePrefix = '') => {
+  return content.replaceAll('\n\n', `<br/>${linePrefix}`).replaceAll('\n', '')
+}
+
+const formatAssessmentAsCellMarkdown = (content, deprecated) => {
+  let result = '';
+  if (deprecated) {
+    result += `<br/>**💀 Deprecated 💀**`;
+  }
+  if (content?.details) {
+    result += `<br/><br/>*Details:* ${encodeAsMarkdownCellContent(content.details)}`;
+  }
+  if (content?.assessment) {
+    result += `<br/><br/>**Assessment:**<br/>\`  \`${encodeAsMarkdownCellContent(content.assessment, '&nbsp;&nbsp;')}`;
+  }
+  return result;
+}
+
 export const generateTable = (rulesDb) => {
   const configNames = Object.keys(rulesDb.getConfigs());
   const rules = rulesDb.rules;
-
+  const assessments = loadAssessments('assessments.yaml');
   console.log(
     markdownTable([
-      ['', ...configNames],
+      ['', ...configNames, 'ext', 'rec', 'strict', 'style', 'Desc'],
       ...Array.from(rules.keys()).sort(rulesCompareFn).map((ruleName) => {
         const meta = allRules[ruleName]?.meta;
         const deprecated = meta ? meta.deprecated : false;
         const extendsBaseRule = meta?.docs ? meta.docs.extendsBaseRule : false;
         const url = meta?.docs ? meta.docs.url : undefined;
+        const description = meta?.docs.description;
+        const recommended = meta?.docs.recommended;
+        const assessment = assessments[ruleName];
         return [
           url
             ? `[\`${ruleName}\`${deprecated ? '💀' : ''}${extendsBaseRule ? '🧱' : ''}](${url})`
@@ -71,7 +104,12 @@ export const generateTable = (rulesDb) => {
             } else if (ruleVal !== undefined) {
               return ' \u2714\ufe0f '
             }
-          })
+          }),
+          extendsBaseRule ? '🧱 ext' : '',
+          recommended === 'recommended' ? '🟩 rec' : '',
+          recommended === 'strict' ? '🔵 strict' : '',
+          recommended === 'stylistic' ? '🔸 style' : '',
+          `${description ?? ''}${formatAssessmentAsCellMarkdown(assessment, deprecated)}`,
         ];
       }),
     ]),
