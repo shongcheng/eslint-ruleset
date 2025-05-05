@@ -7,3 +7,7 @@ array-callback-return:
 arrow-body-style:
   assessment: |
     Purely stylistic and subject to individual preference, not much impact to readability.
+
+block-scoped-var:
+  assessment: |
+    
