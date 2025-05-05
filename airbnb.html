@@ -1,0 +1,2727 @@
+<p>airbnb-ts: 220 rules added
+ts-tc-rec: 97 rules added</p>
+<h2>Ruleset Comparison</h2>
+<h2><code>airbnb-typescript</code></h2>
+<p><code>eslint-config-airbnb</code>: <code>19.0.4</code></p>
+<p><code>eslint-config-airbnb-base</code>: <code>15.0.0</code></p>
+<p><code>eslint-config-airbnb-typescript</code>: <code>18.0.0</code></p>
+<pre><code>extends: [
+  &#39;airbnb&#39;,
+  &#39;airbnb-typescript&#39;,
+  &#39;airbnb/hooks&#39;,
+]
+</code></pre>
+<h2><code>ts-tc-rec</code></h2>
+<p><code>typescript-eslint</code>: <code>8.24.1</code></p>
+<pre><code>tseslint.config(
+  eslint.configs.recommended,
+  tseslint.configs.recommendedTypeChecked,
+  importPlugin.flatConfigs.recommended,
+  importPlugin.flatConfigs.typescript,
+)
+</code></pre>
+<h2>Table</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>airbnb-ts</th>
+<th>ts-tc-rec</th>
+<th>ext</th>
+<th>rec</th>
+<th>strict</th>
+<th>style</th>
+<th>Desc</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="https://eslint.org/docs/latest/rules/array-bracket-spacing"><code>array-bracket-spacing</code>💀</a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Enforce consistent spacing inside array brackets<br/><strong>💀 Deprecated 💀</strong></td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/array-callback-return"><code>array-callback-return</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Enforce <code>return</code> statements in callbacks of array methods<br/><br/><em>Details:</em> Array has several methods for filtering, mapping, and folding. If we forget to write return statement in a callback of those, it’s probably a mistake. If you don’t want to use a return or don’t need the returned results, consider using .forEach instead.<br/><br/><strong>Assessment:</strong><br/><code>  </code>Could be useful to flag out potential errors.</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/arrow-body-style"><code>arrow-body-style</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Require braces around arrow function bodies<br/><br/><strong>Assessment:</strong><br/><code>  </code>Purely stylistic and subject to individual preference, not much impact to readability.</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/arrow-parens"><code>arrow-parens</code>💀</a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Require parentheses around arrow function arguments<br/><strong>💀 Deprecated 💀</strong></td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/arrow-spacing"><code>arrow-spacing</code>💀</a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Enforce consistent spacing before and after the arrow in arrow functions<br/><strong>💀 Deprecated 💀</strong></td>
+</tr>
+<tr>
+<td><a href="https://typescript-eslint.io/rules/await-thenable"><code>@ts/await-thenable</code></a></td>
+<td></td>
+<td>✔️</td>
+<td></td>
+<td>🟩 rec</td>
+<td></td>
+<td></td>
+<td>Disallow awaiting a value that is not a Thenable</td>
+</tr>
+<tr>
+<td><a href="https://typescript-eslint.io/rules/ban-ts-comment"><code>@ts/ban-ts-comment</code></a></td>
+<td></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow <code>@ts-&lt;directive&gt;</code> comments or require descriptions after directives</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/block-scoped-var"><code>block-scoped-var</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Enforce the use of variables within the scope they are defined</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/block-spacing"><code>block-spacing</code>💀</a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow or enforce spaces inside of blocks after opening block and before closing block<br/><strong>💀 Deprecated 💀</strong></td>
+</tr>
+<tr>
+<td><code>@ts/brace-style</code></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/class-methods-use-this"><code>class-methods-use-this</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Enforce that class methods utilize <code>this</code></td>
+</tr>
+<tr>
+<td><code>@ts/comma-dangle</code></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>@ts/comma-spacing</code></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/comma-style"><code>comma-style</code>💀</a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Enforce consistent comma style<br/><strong>💀 Deprecated 💀</strong></td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/computed-property-spacing"><code>computed-property-spacing</code>💀</a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Enforce consistent spacing inside computed property brackets<br/><strong>💀 Deprecated 💀</strong></td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/consistent-return"><code>consistent-return</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Require <code>return</code> statements to either always or never specify values</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/curly"><code>curly</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Enforce consistent brace style for all control statements</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/default-case"><code>default-case</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Require <code>default</code> cases in <code>switch</code> statements</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/default-case-last"><code>default-case-last</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Enforce <code>default</code> clauses in <code>switch</code> statements to be last</td>
+</tr>
+<tr>
+<td><a href="https://typescript-eslint.io/rules/default-param-last"><code>@ts/default-param-last</code>🧱</a></td>
+<td>✔️</td>
+<td></td>
+<td>🧱 ext</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Enforce default parameters to be last</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/dot-location"><code>dot-location</code>💀</a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Enforce consistent newlines before and after dots<br/><strong>💀 Deprecated 💀</strong></td>
+</tr>
+<tr>
+<td><a href="https://typescript-eslint.io/rules/dot-notation"><code>@ts/dot-notation</code>🧱</a></td>
+<td>✔️</td>
+<td></td>
+<td>🧱 ext</td>
+<td></td>
+<td></td>
+<td>🔸 style</td>
+<td>Enforce dot notation whenever possible</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/eol-last"><code>eol-last</code>💀</a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Require or disallow newline at the end of files<br/><strong>💀 Deprecated 💀</strong></td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/eqeqeq"><code>eqeqeq</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Require the use of <code>===</code> and <code>!==</code></td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/for-direction"><code>for-direction</code></a></td>
+<td>✔️</td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Enforce <code>for</code> loop update clause moving the counter in the right direction</td>
+</tr>
+<tr>
+<td><code>@ts/func-call-spacing</code></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/function-call-argument-newline"><code>function-call-argument-newline</code>💀</a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Enforce line breaks between arguments of a function call<br/><strong>💀 Deprecated 💀</strong></td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/function-paren-newline"><code>function-paren-newline</code>💀</a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Enforce consistent line breaks inside function parentheses<br/><strong>💀 Deprecated 💀</strong></td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/generator-star-spacing"><code>generator-star-spacing</code>💀</a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Enforce consistent spacing around <code>*</code> operators in generator functions<br/><strong>💀 Deprecated 💀</strong></td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/global-require"><code>global-require</code>💀</a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Require <code>require()</code> calls to be placed at top-level module scope<br/><strong>💀 Deprecated 💀</strong></td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/grouped-accessor-pairs"><code>grouped-accessor-pairs</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Require grouped accessor pairs in object literals and classes</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/guard-for-in"><code>guard-for-in</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Require <code>for-in</code> loops to include an <code>if</code> statement</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/implicit-arrow-linebreak"><code>implicit-arrow-linebreak</code>💀</a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Enforce the location of arrow function bodies<br/><strong>💀 Deprecated 💀</strong></td>
+</tr>
+<tr>
+<td><code>import/default</code></td>
+<td></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>import/export</code></td>
+<td>✔️</td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>import/extensions</code></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>import/first</code></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>import/namespace</code></td>
+<td></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>import/newline-after-import</code></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>import/no-absolute-path</code></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>import/no-amd</code></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>import/no-cycle</code></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>import/no-duplicates</code></td>
+<td>✔️</td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>import/no-dynamic-require</code></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>import/no-extraneous-dependencies</code></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>import/no-import-module-exports</code></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>import/no-mutable-exports</code></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>import/no-named-as-default</code></td>
+<td>✔️</td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>import/no-named-as-default-member</code></td>
+<td></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>import/no-named-default</code></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>import/no-relative-packages</code></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>import/no-self-import</code></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>import/no-unresolved</code></td>
+<td></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>import/no-useless-path-segments</code></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>import/no-webpack-loader-syntax</code></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>import/order</code></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>import/prefer-default-export</code></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>@ts/indent</code></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/key-spacing"><code>key-spacing</code>💀</a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Enforce consistent spacing between keys and values in object literal properties<br/><strong>💀 Deprecated 💀</strong></td>
+</tr>
+<tr>
+<td><code>@ts/keyword-spacing</code></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/linebreak-style"><code>linebreak-style</code>💀</a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Enforce consistent linebreak style<br/><strong>💀 Deprecated 💀</strong></td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/lines-around-directive"><code>lines-around-directive</code>💀</a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Require or disallow newlines around directives<br/><strong>💀 Deprecated 💀</strong></td>
+</tr>
+<tr>
+<td><code>@ts/lines-between-class-members</code></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/max-classes-per-file"><code>max-classes-per-file</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Enforce a maximum number of classes per file</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/max-len"><code>max-len</code>💀</a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Enforce a maximum line length<br/><strong>💀 Deprecated 💀</strong></td>
+</tr>
+<tr>
+<td><a href="https://typescript-eslint.io/rules/naming-convention"><code>@ts/naming-convention</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Enforce naming conventions for everything across a codebase</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/new-cap"><code>new-cap</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Require constructor names to begin with a capital letter</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/new-parens"><code>new-parens</code>💀</a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Enforce or disallow parentheses when invoking a constructor with no arguments<br/><strong>💀 Deprecated 💀</strong></td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/newline-per-chained-call"><code>newline-per-chained-call</code>💀</a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Require a newline after each call in a method chain<br/><strong>💀 Deprecated 💀</strong></td>
+</tr>
+<tr>
+<td><a href="https://typescript-eslint.io/rules/no-array-constructor"><code>@ts/no-array-constructor</code>🧱</a></td>
+<td>✔️</td>
+<td>✔️</td>
+<td>🧱 ext</td>
+<td>🟩 rec</td>
+<td></td>
+<td></td>
+<td>Disallow generic <code>Array</code> constructors</td>
+</tr>
+<tr>
+<td><a href="https://typescript-eslint.io/rules/no-array-delete"><code>@ts/no-array-delete</code></a></td>
+<td></td>
+<td>✔️</td>
+<td></td>
+<td>🟩 rec</td>
+<td></td>
+<td></td>
+<td>Disallow using the <code>delete</code> operator on array values</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-async-promise-executor"><code>no-async-promise-executor</code></a></td>
+<td>✔️</td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow using an async function as a Promise executor</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-await-in-loop"><code>no-await-in-loop</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow <code>await</code> inside of loops</td>
+</tr>
+<tr>
+<td><a href="https://typescript-eslint.io/rules/no-base-to-string"><code>@ts/no-base-to-string</code></a></td>
+<td></td>
+<td>✔️</td>
+<td></td>
+<td>🟩 rec</td>
+<td></td>
+<td></td>
+<td>Require <code>.toString()</code> and <code>.toLocaleString()</code> to only be called on objects which provide useful information when stringified</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-bitwise"><code>no-bitwise</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow bitwise operators</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-buffer-constructor"><code>no-buffer-constructor</code>💀</a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow use of the <code>Buffer()</code> constructor<br/><strong>💀 Deprecated 💀</strong></td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-caller"><code>no-caller</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow the use of <code>arguments.caller</code> or <code>arguments.callee</code></td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-case-declarations"><code>no-case-declarations</code></a></td>
+<td>✔️</td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow lexical declarations in case clauses</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-class-assign"><code>no-class-assign</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow reassigning class members</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-compare-neg-zero"><code>no-compare-neg-zero</code></a></td>
+<td>✔️</td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow comparing against <code>-0</code></td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-cond-assign"><code>no-cond-assign</code></a></td>
+<td>✔️</td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow assignment operators in conditional expressions</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-confusing-arrow"><code>no-confusing-arrow</code>💀</a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow arrow functions where they could be confused with comparisons<br/><strong>💀 Deprecated 💀</strong></td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-constant-binary-expression"><code>no-constant-binary-expression</code></a></td>
+<td></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow expressions where the operation doesn&#39;t affect the value</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-constant-condition"><code>no-constant-condition</code></a></td>
+<td></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow constant expressions in conditions</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-constructor-return"><code>no-constructor-return</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow returning value from constructor</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-continue"><code>no-continue</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow <code>continue</code> statements</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-control-regex"><code>no-control-regex</code></a></td>
+<td>✔️</td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow control characters in regular expressions</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-debugger"><code>no-debugger</code></a></td>
+<td>✔️</td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow the use of <code>debugger</code></td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-delete-var"><code>no-delete-var</code></a></td>
+<td>✔️</td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow deleting variables</td>
+</tr>
+<tr>
+<td><a href="https://typescript-eslint.io/rules/no-dupe-class-members"><code>@ts/no-dupe-class-members</code>🧱</a></td>
+<td>✔️</td>
+<td></td>
+<td>🧱 ext</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow duplicate class members</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-dupe-else-if"><code>no-dupe-else-if</code></a></td>
+<td>✔️</td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow duplicate conditions in if-else-if chains</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-duplicate-case"><code>no-duplicate-case</code></a></td>
+<td>✔️</td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow duplicate case labels</td>
+</tr>
+<tr>
+<td><a href="https://typescript-eslint.io/rules/no-duplicate-enum-values"><code>@ts/no-duplicate-enum-values</code></a></td>
+<td></td>
+<td>✔️</td>
+<td></td>
+<td>🟩 rec</td>
+<td></td>
+<td></td>
+<td>Disallow duplicate enum member values</td>
+</tr>
+<tr>
+<td><a href="https://typescript-eslint.io/rules/no-duplicate-type-constituents"><code>@ts/no-duplicate-type-constituents</code></a></td>
+<td></td>
+<td>✔️</td>
+<td></td>
+<td>🟩 rec</td>
+<td></td>
+<td></td>
+<td>Disallow duplicate constituents of union or intersection types</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-else-return"><code>no-else-return</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow <code>else</code> blocks after <code>return</code> statements in <code>if</code> statements</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-empty"><code>no-empty</code></a></td>
+<td>✔️</td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow empty block statements</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-empty-character-class"><code>no-empty-character-class</code></a></td>
+<td>✔️</td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow empty character classes in regular expressions</td>
+</tr>
+<tr>
+<td><a href="https://typescript-eslint.io/rules/no-empty-function"><code>@ts/no-empty-function</code>🧱</a></td>
+<td>✔️</td>
+<td></td>
+<td>🧱 ext</td>
+<td></td>
+<td></td>
+<td>🔸 style</td>
+<td>Disallow empty functions</td>
+</tr>
+<tr>
+<td><a href="https://typescript-eslint.io/rules/no-empty-object-type"><code>@ts/no-empty-object-type</code></a></td>
+<td></td>
+<td>✔️</td>
+<td></td>
+<td>🟩 rec</td>
+<td></td>
+<td></td>
+<td>Disallow accidentally using the &quot;empty object&quot; type</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-empty-pattern"><code>no-empty-pattern</code></a></td>
+<td>✔️</td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow empty destructuring patterns</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-empty-static-block"><code>no-empty-static-block</code></a></td>
+<td></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow empty static blocks</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-eval"><code>no-eval</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow the use of <code>eval()</code></td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-ex-assign"><code>no-ex-assign</code></a></td>
+<td>✔️</td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow reassigning exceptions in <code>catch</code> clauses</td>
+</tr>
+<tr>
+<td><a href="https://typescript-eslint.io/rules/no-explicit-any"><code>@ts/no-explicit-any</code></a></td>
+<td></td>
+<td>✔️</td>
+<td></td>
+<td>🟩 rec</td>
+<td></td>
+<td></td>
+<td>Disallow the <code>any</code> type</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-extend-native"><code>no-extend-native</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow extending native types</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-extra-bind"><code>no-extra-bind</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow unnecessary calls to <code>.bind()</code></td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-extra-boolean-cast"><code>no-extra-boolean-cast</code></a></td>
+<td>✔️</td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow unnecessary boolean casts</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-extra-label"><code>no-extra-label</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow unnecessary labels</td>
+</tr>
+<tr>
+<td><a href="https://typescript-eslint.io/rules/no-extra-non-null-assertion"><code>@ts/no-extra-non-null-assertion</code></a></td>
+<td></td>
+<td>✔️</td>
+<td></td>
+<td>🟩 rec</td>
+<td></td>
+<td></td>
+<td>Disallow extra non-null assertions</td>
+</tr>
+<tr>
+<td><code>@ts/no-extra-semi</code></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-fallthrough"><code>no-fallthrough</code></a></td>
+<td>✔️</td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow fallthrough of <code>case</code> statements</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-floating-decimal"><code>no-floating-decimal</code>💀</a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow leading or trailing decimal points in numeric literals<br/><strong>💀 Deprecated 💀</strong></td>
+</tr>
+<tr>
+<td><a href="https://typescript-eslint.io/rules/no-floating-promises"><code>@ts/no-floating-promises</code></a></td>
+<td></td>
+<td>✔️</td>
+<td></td>
+<td>🟩 rec</td>
+<td></td>
+<td></td>
+<td>Require Promise-like statements to be handled appropriately</td>
+</tr>
+<tr>
+<td><a href="https://typescript-eslint.io/rules/no-for-in-array"><code>@ts/no-for-in-array</code></a></td>
+<td></td>
+<td>✔️</td>
+<td></td>
+<td>🟩 rec</td>
+<td></td>
+<td></td>
+<td>Disallow iterating over an array with a for-in loop</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-global-assign"><code>no-global-assign</code></a></td>
+<td>✔️</td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow assignments to native objects or read-only global variables</td>
+</tr>
+<tr>
+<td><a href="https://typescript-eslint.io/rules/no-implied-eval"><code>@ts/no-implied-eval</code>🧱</a></td>
+<td>✔️</td>
+<td>✔️</td>
+<td>🧱 ext</td>
+<td>🟩 rec</td>
+<td></td>
+<td></td>
+<td>Disallow the use of <code>eval()</code>-like functions</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-inner-declarations"><code>no-inner-declarations</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow variable or <code>function</code> declarations in nested blocks</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-invalid-regexp"><code>no-invalid-regexp</code></a></td>
+<td>✔️</td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow invalid regular expression strings in <code>RegExp</code> constructors</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-irregular-whitespace"><code>no-irregular-whitespace</code></a></td>
+<td>✔️</td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow irregular whitespace</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-iterator"><code>no-iterator</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow the use of the <code>__iterator__</code> property</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-label-var"><code>no-label-var</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow labels that share a name with a variable</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-labels"><code>no-labels</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow labeled statements</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-lone-blocks"><code>no-lone-blocks</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow unnecessary nested blocks</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-lonely-if"><code>no-lonely-if</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow <code>if</code> statements as the only statement in <code>else</code> blocks</td>
+</tr>
+<tr>
+<td><a href="https://typescript-eslint.io/rules/no-loop-func"><code>@ts/no-loop-func</code>🧱</a></td>
+<td>✔️</td>
+<td></td>
+<td>🧱 ext</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow function declarations that contain unsafe references inside loop statements</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-loss-of-precision"><code>no-loss-of-precision</code></a></td>
+<td></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow literal numbers that lose precision</td>
+</tr>
+<tr>
+<td><a href="https://typescript-eslint.io/rules/no-loss-of-precision"><code>@ts/no-loss-of-precision</code>💀🧱</a></td>
+<td>✔️</td>
+<td></td>
+<td>🧱 ext</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow literal numbers that lose precision<br/><strong>💀 Deprecated 💀</strong></td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-misleading-character-class"><code>no-misleading-character-class</code></a></td>
+<td>✔️</td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow characters which are made with multiple code points in character class syntax</td>
+</tr>
+<tr>
+<td><a href="https://typescript-eslint.io/rules/no-misused-new"><code>@ts/no-misused-new</code></a></td>
+<td></td>
+<td>✔️</td>
+<td></td>
+<td>🟩 rec</td>
+<td></td>
+<td></td>
+<td>Enforce valid definition of <code>new</code> and <code>constructor</code></td>
+</tr>
+<tr>
+<td><a href="https://typescript-eslint.io/rules/no-misused-promises"><code>@ts/no-misused-promises</code></a></td>
+<td></td>
+<td>✔️</td>
+<td></td>
+<td>🟩 rec</td>
+<td></td>
+<td></td>
+<td>Disallow Promises in places not designed to handle them</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-mixed-operators"><code>no-mixed-operators</code>💀</a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow mixed binary operators<br/><strong>💀 Deprecated 💀</strong></td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-mixed-spaces-and-tabs"><code>no-mixed-spaces-and-tabs</code>💀</a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow mixed spaces and tabs for indentation<br/><strong>💀 Deprecated 💀</strong></td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-multi-assign"><code>no-multi-assign</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow use of chained assignment expressions</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-multi-spaces"><code>no-multi-spaces</code>💀</a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow multiple spaces<br/><strong>💀 Deprecated 💀</strong></td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-multi-str"><code>no-multi-str</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow multiline strings</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-multiple-empty-lines"><code>no-multiple-empty-lines</code>💀</a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow multiple empty lines<br/><strong>💀 Deprecated 💀</strong></td>
+</tr>
+<tr>
+<td><a href="https://typescript-eslint.io/rules/no-namespace"><code>@ts/no-namespace</code></a></td>
+<td></td>
+<td>✔️</td>
+<td></td>
+<td>🟩 rec</td>
+<td></td>
+<td></td>
+<td>Disallow TypeScript namespaces</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-nested-ternary"><code>no-nested-ternary</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow nested ternary expressions</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-new"><code>no-new</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow <code>new</code> operators outside of assignments or comparisons</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-new-object"><code>no-new-object</code>💀</a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow <code>Object</code> constructors<br/><strong>💀 Deprecated 💀</strong></td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-new-require"><code>no-new-require</code>💀</a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow <code>new</code> operators with calls to <code>require</code><br/><strong>💀 Deprecated 💀</strong></td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-new-wrappers"><code>no-new-wrappers</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow <code>new</code> operators with the <code>String</code>, <code>Number</code>, and <code>Boolean</code> objects</td>
+</tr>
+<tr>
+<td><a href="https://typescript-eslint.io/rules/no-non-null-asserted-optional-chain"><code>@ts/no-non-null-asserted-optional-chain</code></a></td>
+<td></td>
+<td>✔️</td>
+<td></td>
+<td>🟩 rec</td>
+<td></td>
+<td></td>
+<td>Disallow non-null assertions after an optional chain expression</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-nonoctal-decimal-escape"><code>no-nonoctal-decimal-escape</code></a></td>
+<td>✔️</td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow <code>\8</code> and <code>\9</code> escape sequences in string literals</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-octal"><code>no-octal</code></a></td>
+<td>✔️</td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow octal literals</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-octal-escape"><code>no-octal-escape</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow octal escape sequences in string literals</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-param-reassign"><code>no-param-reassign</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow reassigning function parameters</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-path-concat"><code>no-path-concat</code>💀</a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow string concatenation with <code>__dirname</code> and <code>__filename</code><br/><strong>💀 Deprecated 💀</strong></td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-plusplus"><code>no-plusplus</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow the unary operators <code>++</code> and <code>--</code></td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-promise-executor-return"><code>no-promise-executor-return</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow returning values from Promise executor functions</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-proto"><code>no-proto</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow the use of the <code>__proto__</code> property</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-prototype-builtins"><code>no-prototype-builtins</code></a></td>
+<td>✔️</td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow calling some <code>Object.prototype</code> methods directly on objects</td>
+</tr>
+<tr>
+<td><a href="https://typescript-eslint.io/rules/no-redeclare"><code>@ts/no-redeclare</code>🧱</a></td>
+<td>✔️</td>
+<td></td>
+<td>🧱 ext</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow variable redeclaration</td>
+</tr>
+<tr>
+<td><a href="https://typescript-eslint.io/rules/no-redundant-type-constituents"><code>@ts/no-redundant-type-constituents</code></a></td>
+<td></td>
+<td>✔️</td>
+<td></td>
+<td>🟩 rec</td>
+<td></td>
+<td></td>
+<td>Disallow members of unions and intersections that do nothing or override type information</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-regex-spaces"><code>no-regex-spaces</code></a></td>
+<td>✔️</td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow multiple spaces in regular expressions</td>
+</tr>
+<tr>
+<td><a href="https://typescript-eslint.io/rules/no-require-imports"><code>@ts/no-require-imports</code></a></td>
+<td></td>
+<td>✔️</td>
+<td></td>
+<td>🟩 rec</td>
+<td></td>
+<td></td>
+<td>Disallow invocation of <code>require()</code></td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-restricted-exports"><code>no-restricted-exports</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow specified names in exports</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-restricted-globals"><code>no-restricted-globals</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow specified global variables</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-restricted-properties"><code>no-restricted-properties</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow certain properties on certain objects</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-restricted-syntax"><code>no-restricted-syntax</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow specified syntax</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-return-assign"><code>no-return-assign</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow assignment operators in <code>return</code> statements</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-script-url"><code>no-script-url</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow <code>javascript:</code> URLs</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-self-assign"><code>no-self-assign</code></a></td>
+<td>✔️</td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow assignments where both sides are exactly the same</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-self-compare"><code>no-self-compare</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow comparisons where both sides are exactly the same</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-sequences"><code>no-sequences</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow comma operators</td>
+</tr>
+<tr>
+<td><a href="https://typescript-eslint.io/rules/no-shadow"><code>@ts/no-shadow</code>🧱</a></td>
+<td>✔️</td>
+<td></td>
+<td>🧱 ext</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow variable declarations from shadowing variables declared in the outer scope</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-shadow-restricted-names"><code>no-shadow-restricted-names</code></a></td>
+<td>✔️</td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow identifiers from shadowing restricted names</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-spaced-func"><code>no-spaced-func</code>💀</a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow spacing between function identifiers and their applications (deprecated)<br/><strong>💀 Deprecated 💀</strong></td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-sparse-arrays"><code>no-sparse-arrays</code></a></td>
+<td>✔️</td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow sparse arrays</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-tabs"><code>no-tabs</code>💀</a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow all tabs<br/><strong>💀 Deprecated 💀</strong></td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-template-curly-in-string"><code>no-template-curly-in-string</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow template literal placeholder syntax in regular strings</td>
+</tr>
+<tr>
+<td><a href="https://typescript-eslint.io/rules/no-this-alias"><code>@ts/no-this-alias</code></a></td>
+<td></td>
+<td>✔️</td>
+<td></td>
+<td>🟩 rec</td>
+<td></td>
+<td></td>
+<td>Disallow aliasing <code>this</code></td>
+</tr>
+<tr>
+<td><code>@ts/no-throw-literal</code></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-trailing-spaces"><code>no-trailing-spaces</code>💀</a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow trailing whitespace at the end of lines<br/><strong>💀 Deprecated 💀</strong></td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-undef-init"><code>no-undef-init</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow initializing variables to <code>undefined</code></td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-underscore-dangle"><code>no-underscore-dangle</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow dangling underscores in identifiers</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-unexpected-multiline"><code>no-unexpected-multiline</code></a></td>
+<td>✔️</td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow confusing multiline expressions</td>
+</tr>
+<tr>
+<td><a href="https://typescript-eslint.io/rules/no-unnecessary-type-assertion"><code>@ts/no-unnecessary-type-assertion</code></a></td>
+<td></td>
+<td>✔️</td>
+<td></td>
+<td>🟩 rec</td>
+<td></td>
+<td></td>
+<td>Disallow type assertions that do not change the type of an expression</td>
+</tr>
+<tr>
+<td><a href="https://typescript-eslint.io/rules/no-unnecessary-type-constraint"><code>@ts/no-unnecessary-type-constraint</code></a></td>
+<td></td>
+<td>✔️</td>
+<td></td>
+<td>🟩 rec</td>
+<td></td>
+<td></td>
+<td>Disallow unnecessary constraints on generic types</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-unneeded-ternary"><code>no-unneeded-ternary</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow ternary operators when simpler alternatives exist</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-unreachable-loop"><code>no-unreachable-loop</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow loops with a body that allows only one iteration</td>
+</tr>
+<tr>
+<td><a href="https://typescript-eslint.io/rules/no-unsafe-argument"><code>@ts/no-unsafe-argument</code></a></td>
+<td></td>
+<td>✔️</td>
+<td></td>
+<td>🟩 rec</td>
+<td></td>
+<td></td>
+<td>Disallow calling a function with a value with type <code>any</code></td>
+</tr>
+<tr>
+<td><a href="https://typescript-eslint.io/rules/no-unsafe-assignment"><code>@ts/no-unsafe-assignment</code></a></td>
+<td></td>
+<td>✔️</td>
+<td></td>
+<td>🟩 rec</td>
+<td></td>
+<td></td>
+<td>Disallow assigning a value with type <code>any</code> to variables and properties</td>
+</tr>
+<tr>
+<td><a href="https://typescript-eslint.io/rules/no-unsafe-call"><code>@ts/no-unsafe-call</code></a></td>
+<td></td>
+<td>✔️</td>
+<td></td>
+<td>🟩 rec</td>
+<td></td>
+<td></td>
+<td>Disallow calling a value with type <code>any</code></td>
+</tr>
+<tr>
+<td><a href="https://typescript-eslint.io/rules/no-unsafe-declaration-merging"><code>@ts/no-unsafe-declaration-merging</code></a></td>
+<td></td>
+<td>✔️</td>
+<td></td>
+<td>🟩 rec</td>
+<td></td>
+<td></td>
+<td>Disallow unsafe declaration merging</td>
+</tr>
+<tr>
+<td><a href="https://typescript-eslint.io/rules/no-unsafe-enum-comparison"><code>@ts/no-unsafe-enum-comparison</code></a></td>
+<td></td>
+<td>✔️</td>
+<td></td>
+<td>🟩 rec</td>
+<td></td>
+<td></td>
+<td>Disallow comparing an enum value with a non-enum value</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-unsafe-finally"><code>no-unsafe-finally</code></a></td>
+<td>✔️</td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow control flow statements in <code>finally</code> blocks</td>
+</tr>
+<tr>
+<td><a href="https://typescript-eslint.io/rules/no-unsafe-function-type"><code>@ts/no-unsafe-function-type</code></a></td>
+<td></td>
+<td>✔️</td>
+<td></td>
+<td>🟩 rec</td>
+<td></td>
+<td></td>
+<td>Disallow using the unsafe built-in Function type</td>
+</tr>
+<tr>
+<td><a href="https://typescript-eslint.io/rules/no-unsafe-member-access"><code>@ts/no-unsafe-member-access</code></a></td>
+<td></td>
+<td>✔️</td>
+<td></td>
+<td>🟩 rec</td>
+<td></td>
+<td></td>
+<td>Disallow member access on a value with type <code>any</code></td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-unsafe-optional-chaining"><code>no-unsafe-optional-chaining</code></a></td>
+<td>✔️</td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow use of optional chaining in contexts where the <code>undefined</code> value is not allowed</td>
+</tr>
+<tr>
+<td><a href="https://typescript-eslint.io/rules/no-unsafe-return"><code>@ts/no-unsafe-return</code></a></td>
+<td></td>
+<td>✔️</td>
+<td></td>
+<td>🟩 rec</td>
+<td></td>
+<td></td>
+<td>Disallow returning a value with type <code>any</code> from a function</td>
+</tr>
+<tr>
+<td><a href="https://typescript-eslint.io/rules/no-unsafe-unary-minus"><code>@ts/no-unsafe-unary-minus</code></a></td>
+<td></td>
+<td>✔️</td>
+<td></td>
+<td>🟩 rec</td>
+<td></td>
+<td></td>
+<td>Require unary negation to take a number</td>
+</tr>
+<tr>
+<td><a href="https://typescript-eslint.io/rules/no-unused-expressions"><code>@ts/no-unused-expressions</code>🧱</a></td>
+<td>✔️</td>
+<td>✔️</td>
+<td>🧱 ext</td>
+<td>🟩 rec</td>
+<td></td>
+<td></td>
+<td>Disallow unused expressions</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-unused-labels"><code>no-unused-labels</code></a></td>
+<td>✔️</td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow unused labels</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-unused-private-class-members"><code>no-unused-private-class-members</code></a></td>
+<td></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow unused private class members</td>
+</tr>
+<tr>
+<td><a href="https://typescript-eslint.io/rules/no-unused-vars"><code>@ts/no-unused-vars</code>🧱</a></td>
+<td>✔️</td>
+<td>✔️</td>
+<td>🧱 ext</td>
+<td>🟩 rec</td>
+<td></td>
+<td></td>
+<td>Disallow unused variables</td>
+</tr>
+<tr>
+<td><a href="https://typescript-eslint.io/rules/no-use-before-define"><code>@ts/no-use-before-define</code>🧱</a></td>
+<td>✔️</td>
+<td></td>
+<td>🧱 ext</td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow the use of variables before they are defined</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-useless-backreference"><code>no-useless-backreference</code></a></td>
+<td>✔️</td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow useless backreferences in regular expressions</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-useless-catch"><code>no-useless-catch</code></a></td>
+<td>✔️</td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow unnecessary <code>catch</code> clauses</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-useless-computed-key"><code>no-useless-computed-key</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow unnecessary computed property keys in objects and classes</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-useless-concat"><code>no-useless-concat</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow unnecessary concatenation of literals or template literals</td>
+</tr>
+<tr>
+<td><a href="https://typescript-eslint.io/rules/no-useless-constructor"><code>@ts/no-useless-constructor</code>🧱</a></td>
+<td>✔️</td>
+<td></td>
+<td>🧱 ext</td>
+<td></td>
+<td>🔵 strict</td>
+<td></td>
+<td>Disallow unnecessary constructors</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-useless-escape"><code>no-useless-escape</code></a></td>
+<td>✔️</td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow unnecessary escape characters</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-useless-rename"><code>no-useless-rename</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow renaming import, export, and destructured assignments to the same name</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-useless-return"><code>no-useless-return</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow redundant return statements</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-var"><code>no-var</code></a></td>
+<td>✔️</td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Require <code>let</code> or <code>const</code> instead of <code>var</code></td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-void"><code>no-void</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow <code>void</code> operators</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-whitespace-before-property"><code>no-whitespace-before-property</code>💀</a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow whitespace before properties<br/><strong>💀 Deprecated 💀</strong></td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/no-with"><code>no-with</code></a></td>
+<td>✔️</td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow <code>with</code> statements</td>
+</tr>
+<tr>
+<td><a href="https://typescript-eslint.io/rules/no-wrapper-object-types"><code>@ts/no-wrapper-object-types</code></a></td>
+<td></td>
+<td>✔️</td>
+<td></td>
+<td>🟩 rec</td>
+<td></td>
+<td></td>
+<td>Disallow using confusing built-in primitive class wrappers</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/nonblock-statement-body-position"><code>nonblock-statement-body-position</code>💀</a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Enforce the location of single-line statements<br/><strong>💀 Deprecated 💀</strong></td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/object-curly-newline"><code>object-curly-newline</code>💀</a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Enforce consistent line breaks after opening and before closing braces<br/><strong>💀 Deprecated 💀</strong></td>
+</tr>
+<tr>
+<td><code>@ts/object-curly-spacing</code></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/object-property-newline"><code>object-property-newline</code>💀</a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Enforce placing object properties on separate lines<br/><strong>💀 Deprecated 💀</strong></td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/object-shorthand"><code>object-shorthand</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Require or disallow method and property shorthand syntax for object literals</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/one-var"><code>one-var</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Enforce variables to be declared either together or separately in functions</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/one-var-declaration-per-line"><code>one-var-declaration-per-line</code>💀</a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Require or disallow newlines around variable declarations<br/><strong>💀 Deprecated 💀</strong></td>
+</tr>
+<tr>
+<td><a href="https://typescript-eslint.io/rules/only-throw-error"><code>@ts/only-throw-error</code>🧱</a></td>
+<td></td>
+<td>✔️</td>
+<td>🧱 ext</td>
+<td>🟩 rec</td>
+<td></td>
+<td></td>
+<td>Disallow throwing non-<code>Error</code> values as exceptions</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/operator-assignment"><code>operator-assignment</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Require or disallow assignment operator shorthand where possible</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/operator-linebreak"><code>operator-linebreak</code>💀</a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Enforce consistent linebreak style for operators<br/><strong>💀 Deprecated 💀</strong></td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/padded-blocks"><code>padded-blocks</code>💀</a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Require or disallow padding within blocks<br/><strong>💀 Deprecated 💀</strong></td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/prefer-arrow-callback"><code>prefer-arrow-callback</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Require using arrow functions for callbacks</td>
+</tr>
+<tr>
+<td><a href="https://typescript-eslint.io/rules/prefer-as-const"><code>@ts/prefer-as-const</code></a></td>
+<td></td>
+<td>✔️</td>
+<td></td>
+<td>🟩 rec</td>
+<td></td>
+<td></td>
+<td>Enforce the use of <code>as const</code> over literal type</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/prefer-const"><code>prefer-const</code></a></td>
+<td>✔️</td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Require <code>const</code> declarations for variables that are never reassigned after declared</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/prefer-destructuring"><code>prefer-destructuring</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Require destructuring from arrays and/or objects</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/prefer-exponentiation-operator"><code>prefer-exponentiation-operator</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow the use of <code>Math.pow</code> in favor of the <code>**</code> operator</td>
+</tr>
+<tr>
+<td><a href="https://typescript-eslint.io/rules/prefer-namespace-keyword"><code>@ts/prefer-namespace-keyword</code></a></td>
+<td></td>
+<td>✔️</td>
+<td></td>
+<td>🟩 rec</td>
+<td></td>
+<td></td>
+<td>Require using <code>namespace</code> keyword over <code>module</code> keyword to declare custom TypeScript modules</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/prefer-numeric-literals"><code>prefer-numeric-literals</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow <code>parseInt()</code> and <code>Number.parseInt()</code> in favor of binary, octal, and hexadecimal literals</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/prefer-object-spread"><code>prefer-object-spread</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow using <code>Object.assign</code> with an object literal as the first argument and prefer the use of object spread instead</td>
+</tr>
+<tr>
+<td><a href="https://typescript-eslint.io/rules/prefer-promise-reject-errors"><code>@ts/prefer-promise-reject-errors</code>🧱</a></td>
+<td></td>
+<td>✔️</td>
+<td>🧱 ext</td>
+<td>🟩 rec</td>
+<td></td>
+<td></td>
+<td>Require using Error objects as Promise rejection reasons</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/prefer-promise-reject-errors"><code>prefer-promise-reject-errors</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Require using Error objects as Promise rejection reasons</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/prefer-regex-literals"><code>prefer-regex-literals</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Disallow use of the <code>RegExp</code> constructor in favor of regular expression literals</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/prefer-rest-params"><code>prefer-rest-params</code></a></td>
+<td>✔️</td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Require rest parameters instead of <code>arguments</code></td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/prefer-spread"><code>prefer-spread</code></a></td>
+<td>✔️</td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Require spread operators instead of <code>.apply()</code></td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/prefer-template"><code>prefer-template</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Require template literals instead of string concatenation</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/quote-props"><code>quote-props</code>💀</a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Require quotes around object literal property names<br/><strong>💀 Deprecated 💀</strong></td>
+</tr>
+<tr>
+<td><code>@ts/quotes</code></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/radix"><code>radix</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Enforce the consistent use of the radix argument when using <code>parseInt()</code></td>
+</tr>
+<tr>
+<td><code>react-hooks/exhaustive-deps</code></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>react-hooks/rules-of-hooks</code></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://typescript-eslint.io/rules/require-await"><code>@ts/require-await</code>🧱</a></td>
+<td></td>
+<td>✔️</td>
+<td>🧱 ext</td>
+<td>🟩 rec</td>
+<td></td>
+<td></td>
+<td>Disallow async functions which do not return promises and have no <code>await</code> expression</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/require-yield"><code>require-yield</code></a></td>
+<td>✔️</td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Require generator functions to contain <code>yield</code></td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/rest-spread-spacing"><code>rest-spread-spacing</code>💀</a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Enforce spacing between rest and spread operators and their expressions<br/><strong>💀 Deprecated 💀</strong></td>
+</tr>
+<tr>
+<td><a href="https://typescript-eslint.io/rules/restrict-plus-operands"><code>@ts/restrict-plus-operands</code></a></td>
+<td></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Require both operands of addition to be the same type and be <code>bigint</code>, <code>number</code>, or <code>string</code></td>
+</tr>
+<tr>
+<td><a href="https://typescript-eslint.io/rules/restrict-template-expressions"><code>@ts/restrict-template-expressions</code></a></td>
+<td></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Enforce template literal expressions to be of <code>string</code> type</td>
+</tr>
+<tr>
+<td><a href="https://typescript-eslint.io/rules/return-await"><code>@ts/return-await</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Enforce consistent awaiting of returned promises</td>
+</tr>
+<tr>
+<td><code>@ts/semi</code></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/semi-spacing"><code>semi-spacing</code>💀</a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Enforce consistent spacing before and after semicolons<br/><strong>💀 Deprecated 💀</strong></td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/semi-style"><code>semi-style</code>💀</a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Enforce location of semicolons<br/><strong>💀 Deprecated 💀</strong></td>
+</tr>
+<tr>
+<td><code>@ts/space-before-blocks</code></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>@ts/space-before-function-paren</code></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/space-in-parens"><code>space-in-parens</code>💀</a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Enforce consistent spacing inside parentheses<br/><strong>💀 Deprecated 💀</strong></td>
+</tr>
+<tr>
+<td><code>@ts/space-infix-ops</code></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/space-unary-ops"><code>space-unary-ops</code>💀</a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Enforce consistent spacing before or after unary operators<br/><strong>💀 Deprecated 💀</strong></td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/spaced-comment"><code>spaced-comment</code>💀</a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Enforce consistent spacing after the <code>//</code> or <code>/*</code> in a comment<br/><strong>💀 Deprecated 💀</strong></td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/strict"><code>strict</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Require or disallow strict mode directives</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/switch-colon-spacing"><code>switch-colon-spacing</code>💀</a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Enforce spacing around colons of switch statements<br/><strong>💀 Deprecated 💀</strong></td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/symbol-description"><code>symbol-description</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Require symbol descriptions</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/template-curly-spacing"><code>template-curly-spacing</code>💀</a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Require or disallow spacing around embedded expressions of template strings<br/><strong>💀 Deprecated 💀</strong></td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/template-tag-spacing"><code>template-tag-spacing</code>💀</a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Require or disallow spacing between template tags and their literals<br/><strong>💀 Deprecated 💀</strong></td>
+</tr>
+<tr>
+<td><a href="https://typescript-eslint.io/rules/triple-slash-reference"><code>@ts/triple-slash-reference</code></a></td>
+<td></td>
+<td>✔️</td>
+<td></td>
+<td>🟩 rec</td>
+<td></td>
+<td></td>
+<td>Disallow certain triple slash directives in favor of ES6-style import declarations</td>
+</tr>
+<tr>
+<td><a href="https://typescript-eslint.io/rules/unbound-method"><code>@ts/unbound-method</code></a></td>
+<td></td>
+<td>✔️</td>
+<td></td>
+<td>🟩 rec</td>
+<td></td>
+<td></td>
+<td>Enforce unbound methods are called with their expected scope</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/unicode-bom"><code>unicode-bom</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Require or disallow Unicode byte order mark (BOM)</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/use-isnan"><code>use-isnan</code></a></td>
+<td>✔️</td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Require calls to <code>isNaN()</code> when checking for <code>NaN</code></td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/valid-typeof"><code>valid-typeof</code></a></td>
+<td></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Enforce comparing <code>typeof</code> expressions against valid strings</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/vars-on-top"><code>vars-on-top</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Require <code>var</code> declarations be placed at the top of their containing scope</td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/wrap-iife"><code>wrap-iife</code>💀</a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Require parentheses around immediate <code>function</code> invocations<br/><strong>💀 Deprecated 💀</strong></td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/yield-star-spacing"><code>yield-star-spacing</code>💀</a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Require or disallow spacing around the <code>*</code> in <code>yield*</code> expressions<br/><strong>💀 Deprecated 💀</strong></td>
+</tr>
+<tr>
+<td><a href="https://eslint.org/docs/latest/rules/yoda"><code>yoda</code></a></td>
+<td>✔️</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>Require or disallow &quot;Yoda&quot; conditions</td>
+</tr>
+</tbody></table>
