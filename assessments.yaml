@@ -2,7 +2,7 @@ array-callback-return:
   details: |
     Array has several methods for filtering, mapping, and folding. If we forget to write return statement in a callback of those, it’s probably a mistake. If you don’t want to use a return or don’t need the returned results, consider using .forEach instead.
   assessment: |
-    Could be useful to flag out potential errors.
+    ✅ Could be useful to flag out potential errors.
 
 arrow-body-style:
   assessment: |
@@ -10,4 +10,15 @@ arrow-body-style:
 
 block-scoped-var:
   assessment: |
+    ✅ Could be useful
+
+"@ts/brace-style":
+  details: |
+    [https://eslint.org/docs/latest/rules/brace-style](https://eslint.org/docs/latest/rules/brace-style)
     
+    
+    This rule was deprecated in ESLint v8.53.0, 
+    use [`@stylistic/js/brace-style`](https://eslint.style/rules/js/brace-style) instead.
+
+  assessment: |
+    Stylistic
