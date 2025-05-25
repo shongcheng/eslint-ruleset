@@ -90,8 +90,20 @@ export const generateTable = (rulesDb) => {
         const deprecated = meta ? meta.deprecated : false;
         const extendsBaseRule = meta?.docs ? meta.docs.extendsBaseRule : false;
         let url = meta?.docs ? meta.docs.url : undefined;
-        if (typeof url === 'undefined' && ruleName.startsWith('@ts/')) {
-          url = `https://eslint.style/rules/ts/${ruleName.replace('@ts/', '')}`
+        if (typeof url === 'undefined') {
+          const plugin = ruleName.split('/')[0];
+          switch (plugin) {
+            case '@ts':
+              url = `https://eslint.style/rules/ts/${ruleName.replace(plugin + '/', '')}`;
+              break;
+            case 'import':
+              url = `https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/${ruleName.replace(plugin + '/', '')}.md`;
+              break;
+          }
+          if (ruleName.startsWith('@ts/')) {
+          } else {
+
+          }
         }
         const description = meta?.docs.description;
         const recommended = meta?.docs.recommended;
