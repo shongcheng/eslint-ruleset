@@ -65,3 +65,10 @@ arrow-body-style:
     Good to standardise within project for consistency.
 
 
+class-methods-use-this:
+  assessment: |
+    No impact to correctness. 
+    
+    Helps in maintainability by being more explicit on whether methods being called directly 
+    affects the object instances' state.  
+    
