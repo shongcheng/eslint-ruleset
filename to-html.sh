@@ -5,7 +5,7 @@ HEAD='
 <head>
 <style>
   html * {
-    font-family: Verdana, sans-serif;
+    font-family: "Courier New", monospace;
   }
   table, th, td {
     border: 1px solid black;
