@@ -73,7 +73,7 @@ const formatAssessmentAsCellMarkdown = (content, deprecated) => {
     result += `<br/><br/>*Details:* ${encodeAsMarkdownCellContent(content.details)}`;
   }
   if (content?.assessment) {
-    result += `<br/><br/>**Assessment:**<br/>\`  \`${encodeAsMarkdownCellContent(content.assessment, '&nbsp;&nbsp;')}`;
+    result += `<br/><br/>**Assessment:**<br/>&nbsp;&nbsp;${encodeAsMarkdownCellContent(content.assessment, '&nbsp;&nbsp;')}`;
   }
   return result;
 }

@@ -8,6 +8,8 @@ arrow-body-style:
   assessment: |
     Purely stylistic and subject to individual preference, not much impact to readability.
 
-@ts/brace:
+'@ts/brace-style':
   assessment: |
     Purely stylistic and subject to individual preference, not much impact to readability.
+    
+    Good to standardise within project for consistency.
