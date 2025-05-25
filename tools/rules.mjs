@@ -89,7 +89,10 @@ export const generateTable = (rulesDb) => {
         const meta = allRules[ruleName]?.meta;
         const deprecated = meta ? meta.deprecated : false;
         const extendsBaseRule = meta?.docs ? meta.docs.extendsBaseRule : false;
-        const url = meta?.docs ? meta.docs.url : undefined;
+        let url = meta?.docs ? meta.docs.url : undefined;
+        if (typeof url === 'undefined' && ruleName.startsWith('@ts/')) {
+          url = `https://eslint.style/rules/ts/${ruleName.replace('@ts/', '')}`
+        }
         const description = meta?.docs.description;
         const recommended = meta?.docs.recommended;
         const assessment = assessments[ruleName];
