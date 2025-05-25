@@ -9,6 +9,56 @@ arrow-body-style:
     Purely stylistic and subject to individual preference, not much impact to readability.
 
 '@ts/brace-style':
+  details: |
+    Enforce consistent brace style for blocks.
+    
+    <pre>
+    if (foo) {
+    
+      bar();
+    
+    } else {
+    
+      baz();
+    
+    }
+    </pre>
+    
+    vs
+ 
+    <pre>   
+    if (foo) {
+    
+      bar();
+    
+    }
+    
+    else {
+    
+      baz();
+    
+    }
+    </pre>
+    
+    vs
+    
+    <pre>
+    if (foo)
+    
+    {
+    
+      bar();
+    
+    }
+    
+    else
+    
+    {
+    
+      baz();
+    
+    }
+    </pre>
   assessment: |
     Purely stylistic and subject to individual preference, not much impact to readability.
     
