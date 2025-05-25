@@ -11,7 +11,7 @@ arrow-body-style:
 '@ts/brace-style':
   details: |
     Enforce consistent brace style for blocks.
-    
+
     <pre>
     if (foo) {
     
@@ -26,7 +26,7 @@ arrow-body-style:
     
     vs
  
-    <pre>   
+    <pre>
     if (foo) {
     
       bar();
