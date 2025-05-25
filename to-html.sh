@@ -4,6 +4,9 @@ HEAD='
 <html>
 <head>
 <style>
+  html * {
+    font-family: Verdana, sans-serif;
+  }
   table, th, td {
     border: 1px solid black;
   }
