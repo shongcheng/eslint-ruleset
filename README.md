@@ -7,6 +7,10 @@ eslint --inspect-config
 ```
 
 ```shell
+eslint --print-config -c tools/ruleset/react-proposal_2025-08-08.mjs dummy.ts
+```
+
+```shell
 # Compare AirBnB with React proposal 2025-08-08 and output to HTML
 tsx tools/compare-airbnb-with-react-proposal_2025-08-08.mjs > airbnb-vs-react-proposal_2025-08-08.md && ./to-html.sh "airbnb-vs-react-proposal_2025-08-08.md" > airbnb-vs-react-proposal_2025-08-08.md.html
 ```
