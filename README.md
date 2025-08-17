@@ -3,6 +3,11 @@
 ## Commands
 
 ```shell
+# Compare AirBnB with React proposal 2025-08-08 and output to HTML
+tsx tools/compare-airbnb-with-react-proposal_2025-08-08.mjs > airbnb-vs-react-proposal_2025-08-08.md && ./to-html.sh "airbnb-vs-react-proposal_2025-08-08.md" > airbnb-vs-react-proposal_2025-08-08.md.html
+```
+
+```shell
 # Compare AirBnB with latest ESLint and output to HTML
 tsx tools/compare-airbnb-with-latest-eslintrules.mjs > airbnb-vs-latest.md && ./to-html.sh > airbnb-vs-latest.md.html
 ```

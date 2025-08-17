@@ -4,7 +4,7 @@
 import RulesDb from './RulesDb.mjs';
 import { getEnabledRules, generateTable } from './rules.mjs'
 import airbnb from './ruleset/airbnb.mjs'
-import tsRecommended from './ruleset/tsRecommended.mjs'
+import tsRecommended from './ruleset/react-proposal_2025-08-08.mjs'
 
 const rulesDb = new RulesDb();
 
