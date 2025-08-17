@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "generate:compare-rules": "tsx tools/compare-eslintrules-with-latest.mts",
-    "generate:config-rules": "tsx ./tools/list-config-rules.mjs"
+    "generate:config-rules": "tsx ./tools/list-config-rules.mjs",
+    "generate:compare-react-proposal_2025-08-08": "tsx tools/compare-airbnb-with-react-proposal_2025-08-08.mjs"
   },
   "keywords": [],
   "author": "",
