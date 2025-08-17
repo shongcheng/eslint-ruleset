@@ -7,7 +7,7 @@ eslint --inspect-config
 ```
 
 ```shell
-eslint --print-config -c tools/ruleset/react-proposal_2025-08-08.mjs dummy.ts
+eslint -c tools/ruleset/react-proposal_2025-08-08.mjs --print-config dummy.ts
 ```
 
 ```shell
