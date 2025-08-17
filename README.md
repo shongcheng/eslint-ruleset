@@ -13,7 +13,7 @@ tsx tools/compare-airbnb-with-react-proposal_2025-08-08.mjs > airbnb-vs-react-pr
 
 ```shell
 # Compare AirBnB with latest ESLint and output to HTML
-tsx tools/compare-airbnb-with-latest-eslintrules.mjs > airbnb-vs-latest.md && ./to-html.sh > airbnb-vs-latest.md.html
+tsx tools/compare-airbnb-with-latest-eslintrules.mjs > airbnb-vs-latest.md && ./to-html.sh airbnb-vs-latest.md > airbnb-vs-latest.md.html
 ```
 
 ```shell

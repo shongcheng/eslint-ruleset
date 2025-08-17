@@ -23,10 +23,10 @@ const thisConfig = tseslint.config(
                 tsconfigRootDir: import.meta.dirname,
             },
         },
-        // plugins: {
-        //     "react-hooks": reactHooks,
-        //     "react-refresh": reactRefresh,
-        // },
+        plugins: {
+            "react-hooks": reactHooks,
+            "react-refresh": reactRefresh,
+        },
         rules: {
             ...reactHooks.configs.recommended.rules,
             ...react.configs["jsx-runtime"].rules,
