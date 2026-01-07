@@ -72,6 +72,10 @@ const formatAssessmentAsCellMarkdown = (content, deprecated) => {
   if (content?.details) {
     result += `<br/><br/>*Details:* ${encodeAsMarkdownCellContent(content.details)}`;
   }
+  if (content?.usefulness) {
+    var ticks = "✔️".repeat(content.usefulness)
+    result += `<br/><br/>**Usefulness:**&nbsp;&nbsp;**${encodeAsMarkdownCellContent(ticks, '&nbsp;&nbsp;')}**`;
+  }
   if (content?.assessment) {
     result += `<br/><br/>**Assessment:**<br/>&nbsp;&nbsp;${encodeAsMarkdownCellContent(content.assessment, '&nbsp;&nbsp;')}`;
   }
