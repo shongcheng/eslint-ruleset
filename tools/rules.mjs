@@ -70,14 +70,20 @@ const formatAssessmentAsCellMarkdown = (content, deprecated) => {
     result += `<br/>**💀 Deprecated 💀**`;
   }
   if (content?.details) {
-    result += `<br/><br/>*Details:* ${encodeAsMarkdownCellContent(content.details)}`;
+    if (result.length > 0)
+      result += '<br/>'.repeat(2);
+    result += `*Details:* ${encodeAsMarkdownCellContent(content.details)}`;
   }
   if (content?.assessment) {
-    result += `<br/><br/>**Assessment:**<br/>&nbsp;&nbsp;${encodeAsMarkdownCellContent(content.assessment, '&nbsp;&nbsp;')}`;
+    if (result.length > 0)
+      result += '<br/>'.repeat(2);
+    result += `**Assessment:**<br/>&nbsp;&nbsp;${encodeAsMarkdownCellContent(content.assessment, '&nbsp;&nbsp;')}`;
   }
   if (content?.usefulness) {
     var ticks = "★".repeat(content.usefulness) // ✔️👍
-    result += `<br/><br/>**Usefulness:**&nbsp;&nbsp;**${encodeAsMarkdownCellContent(ticks, '&nbsp;&nbsp;')}**`;
+    if (result.length > 0)
+      result += '<br/>'.repeat(2);
+    result += `**Usefulness:**&nbsp;&nbsp;**${encodeAsMarkdownCellContent(ticks, '&nbsp;&nbsp;')}**`;
   }
   return result;
 }
