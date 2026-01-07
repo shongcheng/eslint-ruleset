@@ -7,7 +7,13 @@ HEAD='
   html * {
     font-family: "Courier New", monospace;
   }
-  table, th, td {
+  table, td {
+    border: 1px solid black;
+  }
+  th {
+    position: sticky;
+    top: 0;
+    background-color: yellow;
     border: 1px solid black;
   }
 </style>
