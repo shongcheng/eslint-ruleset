@@ -71,4 +71,8 @@ class-methods-use-this:
     
     Helps in maintainability by being more explicit on whether methods being called directly 
     affects the object instances' state.  
-    
+
+
+'@ts/no-floating-promises':
+   assessment: |
+      Useful to flag out potential errors that may be overlooked by developers.
