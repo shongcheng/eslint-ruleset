@@ -9,6 +9,8 @@ HEAD='
   }
   table, td {
     border: 1px solid black;
+    padding-top: 1em;
+    padding-bottom: 1em;
   }
   th {
     position: sticky;
