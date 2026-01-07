@@ -16,7 +16,7 @@ HEAD='
 
 '
 
-BODY="$(npx -y marked -i '$1')"
+BODY="$(npx -y marked -i $1)"
 
 FOOTER='
 </body>
