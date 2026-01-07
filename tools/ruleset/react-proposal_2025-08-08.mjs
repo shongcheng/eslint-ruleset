@@ -4,8 +4,9 @@ import reactHooks from "eslint-plugin-react-hooks";
 import reactRefresh from "eslint-plugin-react-refresh";
 import tseslint from "typescript-eslint";
 import react from "eslint-plugin-react";
+import { ESLint } from 'eslint';
 
-export default tseslint.config(
+const eslintConfig = tseslint.config(
     { ignores: ["dist", "playwright.config.ts"] },
     {
         extends: [
@@ -36,3 +37,11 @@ export default tseslint.config(
         },
     },
 );
+
+const e = new ESLint({
+    overrideConfig: eslintConfig,
+    overrideConfigFile: true,
+});
+
+const config = await e.calculateConfigForFile('dummy.ts')
+export default config;
