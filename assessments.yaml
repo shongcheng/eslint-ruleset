@@ -1,10 +1,12 @@
 array-callback-return:
+  usefulness: 2
   details: |
     Array has several methods for filtering, mapping, and folding. If we forget to write return statement in a callback of those, it’s probably a mistake. If you don’t want to use a return or don’t need the returned results, consider using .forEach instead.
   assessment: |
     Could be useful to flag out potential errors.
 
 arrow-body-style:
+  usefulness: 1
   assessment: |
     Purely stylistic and subject to individual preference, not much impact to readability.
 
@@ -77,3 +79,8 @@ class-methods-use-this:
    usefulness: 3
    assessment: |
       Useful to flag out potential errors that may be overlooked by developers.
+
+'@ts/await-thenable':
+  usefulness: 3
+  assessment: |
+    Useful to flag out potential errors that may be overlooked by developers.
